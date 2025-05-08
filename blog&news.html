@@ -1,0 +1,498 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Get By Gilli</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="assets/img/GetbyGilli.jpg" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="assets/styles.css">
+  
+</head>
+
+<body class="text-gray-900">
+   <!-- HEADER -->
+   <header class="border-b border-gray-200 bg-white fixed w-full z-30 shadow-sm scroll-animate">
+    <div class="container">
+      <nav
+        class="px-4 py-4 flex flex-wrap items-center justify-between"
+        aria-label="Primary Navigation"
+      >
+        <a
+          href="index.html"
+          class="flex items-center space-x-3 flex-shrink-0"
+          aria-label="Homepage"
+        >
+          <img
+            src="https://storage.googleapis.com/a1aa/image/b53476d4-f86a-4a0f-93fe-b7f5a76071d5.jpg"
+            width="40"
+            height="40"
+            alt="Blue location pin logo with white boat icon inside"
+            class="block"
+          />
+          <div>
+            <h1 class="m-0 font-extrabold text-lg leading-none text-gray-900">
+              GetByGiili
+            </h1>
+            <p class="m-0 text-orange-500 font-semibold text-xs leading-tight">
+              We are connecting
+            </p>
+          </div>
+        </a>
+        <button
+          id="nav-toggle"
+          aria-label="Toggle navigation menu"
+          class="block md:hidden focus:outline-none focus:ring-2 focus:ring-sky-600 rounded transition-transform"
+        >
+          <svg
+            class="w-6 h-6 text-gray-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <div
+          id="nav-menu"
+          class="hidden w-full md:flex md:w-auto md:space-x-8 text-sm font-semibold text-gray-900"
+        >
+          <ul
+            class="flex flex-col md:flex-row md:items-center md:space-x-8 space-y-2 md:space-y-0"
+            role="menubar"
+          >
+            <li role="none">
+              <a
+                href="index.html"
+                class="block px-3 py-2 rounded hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-600 transition"
+                role="menuitem"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="destination.html"
+                class="block px-3 py-2 rounded hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-600 transition"
+                role="menuitem"
+                >Destination</a
+              >
+            </li>
+            <li class="relative group" role="none">
+              <a
+                href="#"
+                class="block px-3 py-2 rounded hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-600"
+                role="menuitem"
+                onclick="toggleDropdown(event)"
+              >
+                Speedboat Info
+              </a>
+              <!-- Dropdown Menu -->
+              <ul
+                class="absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg hidden z-50 dropdown-mobile"
+                id="dropdown-menu"
+              >
+                <li>
+                  <a
+                    href="boat_operator.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Speedboat Operator
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Port Location
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Map & Direction
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    How To Book
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+            <script>
+              function toggleDropdown(event) {
+                event.preventDefault(); // Menghindari aksi default link
+                const dropdownMenu = event.target.nextElementSibling; // Mendapatkan dropdown yang ada setelah link
+                dropdownMenu.classList.toggle('hidden'); // Toggle kelas 'hidden'
+              }
+            </script>
+            
+            <li role="none">
+              <a
+                href="blog&news.html"
+                class="block px-3 py-2 rounded hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-600 transition"
+                role="menuitem"
+                >Blog & News</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="block px-3 py-2 rounded hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-600 transition"
+                role="menuitem"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section>
+    <div class="w-full h-64 sm:h-72 md:h-80 lg:h-[28rem] xl:h-[32rem] bg-gradient-to-r from-sky-500 to-blue-800 relative z-0 scroll-animate"></div>
+  </section>  
+  
+  <!-- BOOKING FORM -->
+<section class="container px-4 -mt-16 mb-12 relative z-10 scroll-animate">
+  <!-- Desktop Form (hidden on mobile) -->
+  <form class="hidden md:block bg-white shadow-xl rounded-lg p-6 md:p-8 border border-gray-200">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+      <!-- Departure & Destination -->
+      <div class="flex flex-col lg:flex-row lg:space-x-6 space-y-6 lg:space-y-0">
+        <!-- Departure -->
+        <div class="flex flex-col w-full">
+          <label class="font-semibold text-gray-900 mb-1">Departure</label>
+          <select class="border border-gray-300 rounded px-3 py-2 text-sm w-full transition focus:ring-2 focus:ring-sky-500 focus:outline-none">
+            <option disabled selected hidden>Select Departure</option>
+            <option>Bali (Sanur Port)</option>
+            <option>Bali (Padang Bai Port)</option>
+            <option>Nusa Penida (all port)</option>
+            <option>Gili Trawangan</option>
+            <option>Gili Air</option>
+            <option>Lombok (Bangsal Port)</option>
+          </select>
+        </div>
+      
+        <!-- Destination -->
+        <div class="flex flex-col w-full">
+          <label class="font-semibold text-gray-900 mb-1">Destination</label>
+          <select class="border border-gray-300 rounded px-3 py-2 text-sm w-full transition focus:ring-2 focus:ring-sky-500 focus:outline-none">
+            <option disabled selected hidden>Select Destination</option>
+            <option>Bali (Sanur Port)</option>
+            <option>Bali (Padang Bai Port)</option>
+            <option>Nusa Penida (all port)</option>
+            <option>Gili Trawangan</option>
+            <option>Gili Air</option>
+            <option>Lombok (Bangsal Port)</option>
+          </select>
+        </div>
+      </div>      
+
+      <!-- Dates & Passengers -->
+      <div class="flex flex-col lg:flex-row lg:space-x-6 space-y-6 lg:space-y-0 border-t lg:border-t-0 lg:border-l border-gray-300 pt-6 lg:pt-0 lg:pl-6 flex-1">
+        <div class="flex flex-col w-full space-y-4">
+          <!-- Departure & Return -->
+          <div class="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0">
+            <div class="flex flex-col w-full">
+              <label class="font-semibold text-gray-900 mb-1 block">Departure</label>
+              <input type="date" name="date" placeholder="dd/mm/yy" class="border border-gray-300 rounded px-3 py-2 text-sm w-full transition focus:ring-2 focus:ring-sky-500 focus:outline-none"/>
+            </div>
+            <div class="flex flex-col w-full">
+              <label class="font-semibold text-gray-900 mb-1 block">Return</label>
+              <input type="date" name="date" placeholder="dd/mm/yy" class="border border-gray-300 rounded px-3 py-2 text-sm w-full transition focus:ring-2 focus:ring-sky-500 focus:outline-none"/>
+            </div>
+          </div>
+          <!-- Passengers -->
+          <div class="flex items-end space-x-4">
+            <div class="flex flex-col">
+              <label class="font-semibold text-gray-900 mb-1">Adult</label>
+              <select class="border border-gray-300 rounded px-2 py-2 text-sm w-24 transition focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                <option>0</option>
+                <option>1</option>
+              </select>
+              <span class="text-xs text-gray-500 mt-1">(11+ years)</span>
+            </div>
+            <div class="flex flex-col">
+              <label class="font-semibold text-gray-900 mb-1">Child</label>
+              <select class="border border-gray-300 rounded px-2 py-2 text-sm w-24 transition focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                <option>0</option>
+                <option>1</option>
+              </select>
+              <span class="text-xs text-gray-500 mt-1">.</span>
+            </div>
+            <div class="flex flex-col">
+              <label class="font-semibold text-gray-900 mb-1">Infants</label>
+              <select class="border border-gray-300 rounded px-2 py-2 text-sm w-24 transition focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                <option>0</option>
+                <option>1</option>
+              </select>
+              <span class="text-xs text-gray-500 mt-1">(0-2 years)</span>
+            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300 text-sm h-fit mb-5 flex items-center gap-2 transform hover:scale-105">
+              Search
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <!-- Mobile Form (hidden on desktop) -->
+  <form class="md:hidden bg-white shadow-xl rounded-lg p-6 border border-gray-200 scroll-animate">
+      <div class="space-y-4">
+
+        <!-- Dates -->
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="font-semibold text-gray-900 mb-1 block">Departure</label>
+            <select class="border border-gray-300 rounded px-3 py-2 text-sm w-full transition focus:ring-2 focus:ring-sky-500 focus:outline-none">
+            <option disabled selected hidden>Select Destination</option>
+            <option>Bali (Sanur Port)</option>
+            <option>Bali (Padang Bai Port)</option>
+            <option>Nusa Penida (all port)</option>
+            <option>Gili Trawangan</option>
+            <option>Gili Air</option>
+            <option>Lombok (Bangsal Port)</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-semibold text-gray-900 mb-1 block">Destination</label>
+            <select class="border border-gray-300 rounded px-3 py-2 text-sm w-full transition focus:ring-2 focus:ring-sky-500 focus:outline-none">
+            <option disabled selected hidden>Select Destination</option>
+            <option>Bali (Sanur Port)</option>
+            <option>Bali (Padang Bai Port)</option>
+            <option>Nusa Penida (all port)</option>
+            <option>Gili Trawangan</option>
+            <option>Gili Air</option>
+            <option>Lombok (Bangsal Port)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dates -->
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="font-semibold text-gray-900 mb-1 block">Departure</label>
+            <input type="date" name="date" placeholder="dd/mm/yy" class="border border-gray-300 rounded px-3 py-2 text-sm w-full transition focus:ring-2 focus:ring-sky-500 focus:outline-none"/>
+          </div>
+          <div>
+            <label class="font-semibold text-gray-900 mb-1 block">Return</label>
+            <input type="date" name="date" placeholder="dd/mm/yy" class="border border-gray-300 rounded px-3 py-2 text-sm w-full transition focus:ring-2 focus:ring-sky-500 focus:outline-none"/>
+          </div>
+        </div>
+
+        <!-- Passengers -->
+<div>
+  <label class="font-semibold text-gray-900 mb-2 block">Passengers</label>
+  <div class="grid grid-cols-3 gap-2 sm:gap-4 text-xs">
+    <!-- Adult -->
+    <div>
+      <label class="text-gray-700 block">Adult</label>
+      <select class="border border-gray-300 rounded px-2 py-1 w-full transition focus:ring-2 focus:ring-sky-500 focus:outline-none">
+        <option>0</option>
+        <option>1</option>
+      </select>
+      <span class="text-[10px] text-gray-500 block">(11+ yrs)</span>
+    </div>
+
+    <!-- Child -->
+    <div>
+      <label class="text-gray-700 block">Child</label>
+      <select class="border border-gray-300 rounded px-2 py-1 w-full transition focus:ring-2 focus:ring-sky-500 focus:outline-none">
+        <option>0</option>
+        <option>1</option>
+      </select>
+    </div>
+
+    <!-- Infants -->
+    <div>
+      <label class="text-gray-700 block">Infants</label>
+      <select class="border border-gray-300 rounded px-2 py-1 w-full transition focus:ring-2 focus:ring-sky-500 focus:outline-none">
+        <option>0</option>
+        <option>1</option>
+      </select>
+      <span class="text-[10px] text-gray-500 block">(0–2 yrs)</span>
+    </div>
+  </div>
+</div>
+        <!-- Search Button -->
+        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 text-sm mt-4 transform hover:scale-105">
+          Search
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-6 text-center text-xs text-gray-500">
+      <p class="mt-1">Powered By IndoAppsSolusindo.id</p>
+    </div>
+  </form>
+</section>
+
+  <!-- Discover the World Section -->
+<section class="container px-4 mt-16 mb-24">
+  <div class="text-center mb-12 animate__animated animate__fadeIn">
+    <h2 class="section__title text-3xl font-bold text-center mt-2">Latest Blog</h2>
+    <span class="text-gray-600 section__subtitle block text-center">
+      Explore our latest updates and discover the destinations we serve for your fast boat journeys.
+    </span>
+  </div>
+  
+  <div class="blog__content grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+    <article class="blog__card bg-white shadow-lg rounded-lg overflow-hidden scroll-animate">
+      <div class="blog__image relative">
+        <img src="https://giliwanders.com/fotoberita/landscape-tropical-vacation-palm-summer.jpg" alt="Tropical vacation landscape with palm trees and blue sky" class="blog__img w-full h-48 object-cover max-w-[350px] mx-auto cursor-pointer" />
+      </div>
+      <div class="blog__data p-4">
+        <div class="flex items-center text-gray-500 mb-2">
+          <i class="fas fa-calendar-alt text-gray-500 mr-2"></i>
+          <span>1 Mei 2025</span>
+        </div>
+        <h2 class="blog__title text-xl font-bold">Kenalan dengan GetByGili: Solusi Nyaman dan Cepat untuk Menjelajah Kepulauan Indonesia</h2>
+        <p class="blog__description text-gray-600 mt-2">GetByGili hadir sebagai platform pemesanan speedboat dan fast boat terpercaya yang menghubungkan destinasi-destinasi populer di Indonesia seperti Bali, Gili Trawangan, Nusa Penida, dan Lombok.</p>
+        <div class="blog__footer flex items-center justify-between mt-4">
+          <a href="blog_detail.html" class="border border-blue-600 text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-blue-100 transition duration-300 transform hover:scale-105">View Detail</a>
+          <div class="flex items-center text-gray-500 ml-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+            <span>1.234</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Second blog card -->
+    <article class="blog__card bg-white shadow-lg rounded-lg overflow-hidden scroll-animate">
+      <div class="blog__image relative">
+        <img src="https://giliwanders.com/fotoberita/kelingking-beach-nusa-penida-island-bali-indonesia.jpg" alt="Kelingking Beach Nusa Penida Island Bali Indonesia" class="blog__img w-full h-48 object-cover max-w-[350px] mx-auto cursor-pointer" />
+      </div>
+      <div class="blog__data p-4">
+        <div class="flex items-center text-gray-500 mb-2">
+          <i class="fas fa-calendar-alt text-gray-500 mr-2"></i>
+          <span>4 Mei 2025</span>
+        </div>
+        <h2 class="blog__title text-xl font-bold">GetByGili Kini Layani Langsung dari Sanur ke Gili Trawangan</h2>
+        <p class="blog__description text-gray-600 mt-2">Dalam upaya memperluas jangkauan layanan, GetByGili resmi membuka rute langsung dari Sanur ke Gili Trawangan, tanpa perlu transit di Padang Bai.</p>
+        <div class="blog__footer flex items-center justify-between mt-4">
+          <a href="blog_detail.html" class="border border-blue-600 text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-blue-100 transition duration-300 transform hover:scale-105">View Detail</a>
+          <div class="flex items-center text-gray-500 ml-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+            <span>1.234</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="blog__card bg-white shadow-lg rounded-lg overflow-hidden scroll-animate">
+      <div class="blog__image relative">
+        <img src="https://giliwanders.com/fotoberita/kelingking-beach-nusa-penida-island-bali-indonesia.jpg" alt="Kelingking Beach Nusa Penida Island Bali Indonesia" class="blog__img w-full h-48 object-cover max-w-[350px] mx-auto cursor-pointer" />
+      </div>
+      <div class="blog__data p-4">
+        <div class="flex items-center text-gray-500 mb-2">
+          <i class="fas fa-calendar-alt text-gray-500 mr-2"></i>
+          <span>7 April 2025</span>
+        </div>
+        <h2 class="blog__title text-xl font-bold">Cara Mudah Pesan Tiket Speedboat di GetByGili + Promo Spesial!</h2>
+        <p class="blog__description text-gray-600 mt-2">GetByGili hadir dengan sistem pemesanan online yang cepat dan praktis! Kini booking tiket ke Gili Trawangan, Nusa Penida, atau Lombok bisa dilakukan dalam hitungan menit—dan jangan lewatkan promo kode #getbygilli untuk potongan harga menarik!</p>
+        <div class="blog__footer flex items-center justify-between mt-4">
+          <a href="blog_detail.html" class="border border-blue-600 text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-blue-100 transition duration-300 transform hover:scale-105">View Detail</a>
+          <div class="flex items-center text-gray-500 ml-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+            <span>1.234</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>  
+
+  <!-- Footer -->
+  <footer class="bg-white rounded-t-3xl shadow-inner text-xs text-gray-600 mt-12 scroll-animate">
+    <div class="container px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
+        <div>
+          <h3 class="text-sky-900 font-extrabold mb-3 text-lg">GetByGilli</h3>
+          <p class="text-gray-400 leading-relaxed text-sm">
+            With our reliable Bali Ferry services, you can explore breathtaking
+            islands, soak up the sun, and travel comfortably.
+          </p>
+          <button
+            class="mt-6 bg-sky-900 text-white text-sm font-semibold rounded-full px-6 py-2 hover:bg-sky-800 transition transform hover:scale-105"
+            type="button"
+          >
+            Contact
+          </button>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-3 text-sm tracking-wide">
+            MENU
+          </h4>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li><a class="hover:text-sky-600 transition" href="#">Home</a></li>
+            <li><a class="hover:text-sky-600 transition" href="#">Destination</a></li>
+            <li><a class="hover:text-sky-600 transition" href="#">Speedboat Info</a></li>
+            <li><a class="hover:text-sky-600 transition" href="#">Blog & News</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-3 text-sm tracking-wide">INFO</h4>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li><a class="hover:text-sky-600 transition" href="#">FAQs</a></li>
+            <li><a class="hover:text-sky-600 transition" href="#">Support Center</a></li>
+            <li><a class="hover:text-sky-600 transition" href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-3 text-sm tracking-wide">
+            SOCIAL
+          </h4>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li><a class="hover:text-sky-600 transition" href="#">Instagram</a></li>
+            <li><a class="hover:text-sky-600 transition" href="#">Facebook</a></li>
+            <li><a class="hover:text-sky-600 transition" href="#">Youtube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 flex flex-col md:flex-row justify-between text-[13px] text-gray-900">
+        <span>© 2025 GetByGilli.com All Rights Reserved</span>
+        <span class="mt-3 md:mt-0">Designed by IndoAppsSolusindo</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/page.js"></script>
+</body>
+</html>
